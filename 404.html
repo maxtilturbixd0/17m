@@ -16,13 +16,21 @@
         }
         .error-image {
             width: 100%;
+            max-width: 100%;
             height: auto;
+        }
+        @media (max-width: 768px) {
+            .error-image {
+                width: 90%; /* Ajusta a un 90% del ancho en pantallas pequeñas */
+                max-width: 90%; /* Mantén el ancho dentro de límites */
+                height: auto;
+            }
         }
     </style>
 </head>
 <body>
     <picture>
-        <source srcset="./img/error404m.png" media="(max-width: 768px)">  <!-- Mobile image -->
+        <source srcset="./img/error404m.png" media="(max-width: 768px)"> <!-- Mobile image -->
         <img src="./img/error404.png" alt="Error 404" class="error-image"> <!-- Default to PC image -->
     </picture>
     <script>
@@ -35,3 +43,4 @@
     </script>
 </body>
 </html>
+
